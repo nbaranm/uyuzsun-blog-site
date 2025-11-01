@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Uyuzsun — İnternetteki en tatlı uyuz</title>
+  <meta name="description" content="Uyuzsun: Biraz uyuz, oldukça zeki ve şaşırtıcı derecede faydalı. Yakında burada minimal şeyler, sert gerçekler ve tatlı tripler olacak." />
+  <link rel="canonical" href="https://uyuzsun.com/" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Uyuzsun — İnternetteki en tatlı uyuz" />
+  <meta property="og:description" content="Biraz uyuz, oldukça zeki ve şaşırtıcı derecede faydalı." />
+  <meta property="og:url" content="https://uyuzsun.com/" />
+  <meta property="og:image" content="https://uyuzsun.com/og-image.jpg" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Uyuzsun — İnternetteki en tatlı uyuz" />
+  <meta name="twitter:description" content="Biraz uyuz, oldukça zeki ve şaşırtıcı derecede faydalı." />
+  <meta name="twitter:image" content="https://uyuzsun.com/og-image.jpg" />
+
+  <!-- Tailwind (CDN) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Basit, hafif animasyon */
+    @keyframes floaty {0%{transform:translateY(0)}50%{transform:translateY(-6px)}100%{transform:translateY(0)}}
+    .floaty{animation:floaty 6s ease-in-out infinite}
+  </style>
+</head>
+<body class="bg-neutral-950 text-neutral-100 antialiased selection:bg-fuchsia-400/30">
+  <!-- Header -->
+  <header class="sticky top-0 z-30 bg-neutral-950/70 backdrop-blur border-b border-neutral-800">
+    <div class="mx-auto max-w-6xl px-4 py-3 flex items-center justify-between">
+      <a href="#" class="flex items-center gap-2 group">
+        <div class="size-8 rounded-xl bg-gradient-to-br from-fuchsia-500 to-violet-600 shadow-md"></div>
+        <span class="font-extrabold tracking-tight text-lg">uyuz<span class="text-fuchsia-400">sun</span></span>
+      </a>
+      <nav class="hidden sm:flex items-center gap-6 text-sm text-neutral-300">
+        <a href="#manifesto" class="hover:text-white">Manifesto</a>
+        <a href="#projeler" class="hover:text-white">Projeler</a>
+        <a href="#iletisim" class="hover:text-white">İletişim</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="relative overflow-hidden">
+    <div class="absolute inset-0 -z-10">
+      <div class="absolute -top-24 -left-24 size-[400px] bg-fuchsia-600/20 blur-3xl rounded-full"></div>
+      <div class="absolute -bottom-24 -right-24 size-[420px] bg-violet-600/20 blur-3xl rounded-full"></div>
+    </div>
+    <div class="mx-auto max-w-6xl px-4 py-24 sm:py-32">
+      <div class="max-w-3xl">
+        <h1 class="text-4xl sm:text-6xl font-extrabold leading-tight tracking-tight">
+          İnternetteki <span class="text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-400 to-violet-400">en tatlı uyuz</span>
+        </h1>
+        <p class="mt-6 text-neutral-300 text-lg leading-relaxed">
+          Burada; kısa, net ve hafif uyuz gerçekler var. Gereksiz şeker yok. Tasarım, oyun, üretkenlik ve yaratıcı işlere dair <span class="text-neutral-100">az laf, çok iş</span> yaklaşımı.
+        </p>
+        <div class="mt-8 flex items-center gap-3">
+          <a href="#manifesto" class="px-5 py-3 rounded-2xl bg-white text-neutral-900 font-semibold hover:bg-neutral-200 transition">Neye uyuzuz?</a>
+          <a href="#projeler" class="px-5 py-3 rounded-2xl border border-neutral-700 text-neutral-200 hover:border-neutral-500 transition">Projeler</a>
+        </div>
+        <p class="mt-4 text-sm text-neutral-400">HTTPS hazır olduğunda adres otomatik olarak güvenli sürüme yönlendirilir.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Manifesto -->
+  <section id="manifesto" class="mx-auto max-w-6xl px-4 py-16">
+    <div class="grid gap-10 md:grid-cols-2 items-start">
+      <div>
+        <h2 class="text-2xl sm:text-3xl font-bold">Manifesto</h2>
+        <p class="mt-4 text-neutral-300 leading-relaxed">
+          <strong>Basit olun.</strong> Karmaşık anlatma, sade üret. <br/>
+          <strong>Hızlı olun.</strong> Mükemmeliyet yerine yayınla, ölç, düzelt. <br/>
+          <strong>Gerçekçi olun.</strong> Gösterişli sözlerden çok çalışan sistemlere inan.
+        </p>
+        <p class="mt-4 text-neutral-400 text-sm">Bu site minimal içerik ve faydalı ipuçlarıyla düzenli güncellenecek.</p>
+      </div>
+      <div class="grid gap-4">
+        <div class="p-5 rounded-2xl border border-neutral-800 bg-neutral-900/40">
+          <h3 class="font-semibold">Kısa Rehberler</h3>
+          <p class="mt-1 text-neutral-400">5 dakikada tüket, hemen uygula. Oyun & tasarım iş akışları.</p>
+        </div>
+        <div class="p-5 rounded-2xl border border-neutral-800 bg-neutral-900/40">
+          <h3 class="font-semibold">Checklist’ler</h3>
+          <p class="mt-1 text-neutral-400">Lansman, sunum, toplantı öncesi kontrol listeleri.</p>
+        </div>
+        <div class="p-5 rounded-2xl border border-neutral-800 bg-neutral-900/40">
+          <h3 class="font-semibold">Gerçek Vaka Notları</h3>
+          <p class="mt-1 text-neutral-400">Ne işe yaradı, ne batırdı? Kısa, net özetler.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projeler -->
+  <section id="projeler" class="mx-auto max-w-6xl px-4 py-16">
+    <h2 class="text-2xl sm:text-3xl font-bold">Projeler</h2>
+    <div class="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      <!-- Card 1 -->
+      <article class="p-6 rounded-2xl border border-neutral-800 bg-neutral-900/40 hover:border-neutral-600 transition">
+        <h3 class="font-semibold">Stockout</h3>
+        <p class="mt-2 text-neutral-400">Supermarket Battle Arena — hız, kaos ve fizik tabanlı eğlence.</p>
+        <a href="#" class="mt-3 inline-block text-sm font-medium text-fuchsia-400 hover:underline">Detay yakında</a>
+      </article>
+      <!-- Card 2 -->
+      <article class="p-6 rounded-2xl border border-neutral-800 bg-neutral-900/40 hover:border-neutral-600 transition">
+        <h3 class="font-semibold">Skillnest</h3>
+        <p class="mt-2 text-neutral-400">Yaratıcı portföy ve iş birliği platformu. Türkiye’den global’e.</p>
+        <a href="#" class="mt-3 inline-block text-sm font-medium text-fuchsia-400 hover:underline">Detay yakında</a>
+      </article>
+      <!-- Card 3 -->
+      <article class="p-6 rounded-2xl border border-neutral-800 bg-neutral-900/40 hover:border-neutral-600 transition">
+        <h3 class="font-semibold">FlowMaster</h3>
+        <p class="mt-2 text-neutral-400">Stüdyo akışlarını gerçekçi verilerle yöneten hafif SaaS.</p>
+        <a href="#" class="mt-3 inline-block text-sm font-medium text-fuchsia-400 hover:underline">Detay yakında</a>
+      </article>
+    </div>
+  </section>
+
+  <!-- CTA / Bülten -->
+  <section class="mx-auto max-w-6xl px-4 py-16">
+    <div class="rounded-3xl border border-neutral-800 bg-neutral-900/40 p-8 md:p-10 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+      <div>
+        <h3 class="text-xl font-bold">Bir şey yayınlayınca haber verelim mi?</h3>
+        <p class="mt-1 text-neutral-400">E-posta bırak, ayda 1 kısa özet gönderelim. Döküman spam’i yok.</p>
+      </div>
+      <!-- Netlify Forms -->
+      <form name="bulten" method="POST" data-netlify="true" class="w-full md:w-auto flex gap-3" netlify-honeypot="bot-field">
+        <input type="hidden" name="form-name" value="bulten" />
+        <p class="hidden"><label>Bot <input name="bot-field" /></label></p>
+        <input required type="email" name="email" placeholder="ornek@mail.com" class="w-full md:w-72 px-4 py-3 rounded-2xl bg-neutral-950 border border-neutral-800 text-neutral-200 placeholder-neutral-500 focus:outline-none focus:ring-2 focus:ring-fuchsia-500" />
+        <button type="submit" class="px-5 py-3 rounded-2xl bg-fuchsia-500 text-neutral-950 font-semibold hover:bg-fuchsia-400 transition">Kaydol</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- İletişim -->
+  <section id="iletisim" class="mx-auto max-w-6xl px-4 py-16">
+    <div class="grid gap-8 md:grid-cols-5">
+      <div class="md:col-span-3">
+        <h2 class="text-2xl sm:text-3xl font-bold">İletişim</h2>
+        <p class="mt-3 text-neutral-400">Kısa, net ve işe yarar mesajlara hızlı döneriz.</p>
+        <form name="iletisim" method="POST" data-netlify="true" class="mt-6 grid gap-3" netlify-honeypot="anti">
+          <input type="hidden" name="form-name" value="iletisim" />
+          <p class="hidden"><label>Anti <input name="anti" /></label></p>
+          <input required name="ad" placeholder="Ad Soyad" class="px-4 py-3 rounded-2xl bg-neutral-950 border border-neutral-800 text-neutral-200 placeholder-neutral-500 focus:outline-none focus:ring-2 focus:ring-fuchsia-500" />
+          <input required type="email" name="email" placeholder="E-posta" class="px-4 py-3 rounded-2xl bg-neutral-950 border border-neutral-800 text-neutral-200 placeholder-neutral-500 focus:outline-none focus:ring-2 focus:ring-fuchsia-500" />
+          <textarea required name="mesaj" placeholder="Mesaj" rows="4" class="px-4 py-3 rounded-2xl bg-neutral-950 border border-neutral-800 text-neutral-200 placeholder-neutral-500 focus:outline-none focus:ring-2 focus:ring-fuchsia-500"></textarea>
+          <button class="mt-2 w-full sm:w-auto px-5 py-3 rounded-2xl bg-white text-neutral-900 font-semibold hover:bg-neutral-200 transition">Gönder</button>
+        </form>
+      </div>
+      <aside class="md:col-span-2 p-6 rounded-2xl border border-neutral-800 bg-neutral-900/40 floaty">
+        <h3 class="font-semibold">Not</h3>
+        <p class="mt-2 text-neutral-400">HTTPS doğrulaması tamamlanınca bu site otomatik olarak güvenli (https) üzerinden servis edilir. Eğer bir süre sonra hâlâ kilit simgesini görmezsen sayfayı yenile.</p>
+        <div class="mt-4 text-sm text-neutral-500">
+          <p>© <span id="yil"></span> uyuzsun. Tüm hakları saklı değildir — paylaşırken link ver, yeter.</p>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="border-t border-neutral-800">
+    <div class="mx-auto max-w-6xl px-4 py-8 text-sm text-neutral-400 flex flex-col sm:flex-row gap-2 sm:gap-6 justify-between">
+      <p>uyuzsun — minimal, hızlı, faydalı.</p>
+      <div class="flex gap-4">
+        <a href="#" class="hover:text-neutral-200">Gizlilik</a>
+        <a href="#" class="hover:text-neutral-200">Künye</a>
+        <a href="#" class="hover:text-neutral-200">RSS</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('yil').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
