@@ -1,0 +1,48 @@
+
+:root{
+  --bg:#0b0c0f;
+  --fg:#f2f5f7;
+  --muted:#9aa4ad;
+  --card:#12141a;
+  --line:#1b1f27;
+  --accent:#5ee1a8;
+  --danger:#ff5d6c;
+  --warn:#ffd166;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;background:var(--bg);color:var(--fg);font:16px/1.5 ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto}
+.wrap{max-width:900px;margin:0 auto;padding:16px}
+header h1{margin:16px 0 2px 0;font-size:28px}
+.tag{color:var(--muted);margin:0 0 8px 0}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px}
+.composer h2{font-size:18px;margin:0 0 8px 0}
+textarea{width:100%;resize:vertical;border-radius:10px;border:1px solid var(--line);background:#0f1116;color:var(--fg);padding:12px}
+.controls{display:flex;align-items:center;gap:12px;margin-top:8px}
+.controls .left{flex:1;color:var(--muted);font-size:14px}
+.controls .right{display:flex;gap:8px}
+.btn{appearance:none;border:1px solid var(--line);background:#191c24;color:var(--fg);padding:8px 12px;border-radius:10px;cursor:pointer}
+.btn:hover{border-color:#2a3140}
+.btn.ghost{background:transparent}
+.btn.report{border-color:#2a1e22}
+.btn.report:hover{border-color:#3a2a30}
+.btn.star{border-color:#203026}
+.btn.star:hover{border-color:#2b3d33}
+.ok{color:var(--accent);margin-top:6px}
+.error{color:var(--danger);margin-top:6px}
+.tiny{font-size:12px;color:var(--muted)}
+.toolbar{display:flex;align-items:center;justify-content:space-between;gap:12px;margin:16px 0}
+.toolbar .center{color:var(--muted)}
+.feed{display:flex;flex-direction:column;gap:12px}
+.post{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px}
+.meta{display:flex;align-items:center;gap:10px;color:var(--muted);font-size:13px;margin-top:8px}
+.meta .spacer{flex:1}
+.badge{font-size:11px;background:#0f1116;border:1px solid var(--line);padding:3px 6px;border-radius:999px;color:var(--muted)}
+.badge.star{border-color:#2a4032}
+.badge.rep{border-color:#402a2e}
+.foot{opacity:.7;margin:24px auto 40px auto;border-top:1px dashed var(--line)}
+a.inline{color:var(--fg);text-decoration:underline dotted}
+.hiddenNote{font-size:13px;color:var(--warn);margin-top:8px}
+.weekly h3{margin:0 0 8px 0;font-size:18px}
+.weekly .post{margin-top:8px}
+.disclaimer{margin-top:12px;line-height:1.4}
+.consent{display:flex;gap:8px;align-items:flex-start;margin:8px 0}

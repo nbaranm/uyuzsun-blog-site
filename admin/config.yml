@@ -1,0 +1,23 @@
+backend:
+  name: git-gateway
+  branch: main
+
+site_url: https://uyuzsun.com
+
+media_folder: "static/uploads"    # Dosyalar repo içinde buraya kaydedilir
+public_folder: "/uploads"         # Siteden erişim yolu
+
+publish_mode: editorial_workflow  # Taslak → inceleme → yayın akışı
+
+collections:
+  - name: "posts"
+    label: "Yazılar"
+    label_singular: "Yazı"
+    folder: "posts"               # Yazı dosyalarının bulunduğu klasör
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Başlık", name: "title", widget: "string" }
+      - { label: "Tarih", name: "date", widget: "datetime" }
+      - { label: "Kapak Görseli", name: "thumbnail", widget: "image", required: false }
+      - { label: "İçerik", name: "body", widget: "markdown" }

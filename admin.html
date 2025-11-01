@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Uyuzsun Admin</title>
+  <link rel="stylesheet" href="/assets/style.css">
+</head>
+<body>
+  <main class="wrap">
+    <h2>Admin Panel</h2>
+    <p class="tiny">Token gir ve listeyi çek. İçerikleri gizle/göster/sil.</p>
+    <div class="card" style="display:flex;gap:8px;align-items:center">
+      <input id="token" placeholder="ADMIN_TOKEN" style="flex:1;padding:8px;border-radius:8px;border:1px solid var(--line);background:#0f1116;color:var(--fg)">
+      <button class="btn" id="btnLoad">Yükle</button>
+      <button class="btn ghost" id="btnArchive">30+ gün arşivle</button>
+    </div>
+    <div id="out" class="feed" style="margin-top:12px"></div>
+  </main>
+<script>
+const $=s=>document.querySelector(s);
+async function fetchJSON(url, opts={}){
+  const token = $("#token").value.trim();
+  const headers = {"Content-Type":"application/json"};
+  if (token) headers["Authorization"] = "Bearer " + token;
+  const res = await fetch(url, {headers, ...opts});
+  if (!res.ok){ const t=await res.text(); throw new Error(t); }
+  return res.json();
+}
+async function load(){
+  const data = await fetchJSON("/.netlify/functions/api?op=admin_list");
+  const out = $("#out"); out.innerHTML = "";
+  data.items.forEach(p=>{
+    const card = document.createElement("div");
+    card.className="post";
+    card.innerHTML = \`
+      <p>\${p.text}</p>
+      <div class="meta">
+        <span>\${new Date(p.ts).toLocaleString("tr-TR")}</span>
+        <span class="badge star">⭐ \${p.stars||0}</span>
+        <span class="badge rep">\${p.reports||0} şikayet</span>
+        <span class="badge">\${p.hidden? "GİZLİ": "GÖRÜNÜR"}</span>
+        <div class="spacer"></div>
+        <button class="btn" data-op="toggle" data-id="\${p.id}">\${p.hidden?"Göster":"Gizle"}</button>
+        <button class="btn ghost" data-op="del" data-id="\${p.id}">Sil</button>
+      </div>\`;
+    out.appendChild(card);
+  });
+  out.addEventListener("click", async (e)=>{
+    if (e.target.dataset.op==="toggle"){
+      await fetchJSON("/.netlify/functions/api?op=admin_toggle", {method:"POST", body:JSON.stringify({id:e.target.dataset.id})});
+      load();
+    } else if (e.target.dataset.op==="del"){
+      await fetchJSON("/.netlify/functions/api?op=admin_delete", {method:"POST", body:JSON.stringify({id:e.target.dataset.id})});
+      load();
+    }
+  }, {once:true});
+}
+$("#btnLoad").addEventListener("click", load);
+$("#btnArchive").addEventListener("click", async ()=>{
+  await fetchJSON("/.netlify/functions/api?op=archive_run");
+  alert("Arşivleme tamam.");
+  load();
+});
+</script>
+</body>
+</html>

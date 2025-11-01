@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Uyuzsun</title>
+  <meta name="description" content="Anonim uyuzluk dökümü. Küfür, din, siyaset ve ifşa yok.">
+  <link rel="stylesheet" href="/assets/style.css">
+</head>
+<body>
+  <header class="wrap">
+    <h1>Uyuzsun</h1>
+    <p class="tag">Anonim uyuzluk dökümü • Küfür/din/siyaset/ifşa YASAK</p>
+  </header>
+
+  <main class="wrap">
+    <section class="composer card">
+      <h2>Yeni uyuzluk yaz</h2>
+      <form id="composeForm">
+        <textarea id="content" rows="5" maxlength="800" placeholder="Örn: Dün Mecidiyeköy'de otobüs yolu kapadı, 500E şoförü – uyuzsun emmi"></textarea>
+        <label class="consent tiny">
+          <input type="checkbox" id="consentBox">
+          <span id="consentText">Kuralları okudum ve kabul ediyorum.</span>
+        </label>
+        <div class="controls">
+          <div class="left">
+            <span class="hint">Anonim gönderim — kullanıcı adı yok</span>
+          </div>
+          <div class="right">
+            <button type="submit" class="btn">Yayınla</button>
+          </div>
+        </div>
+        <p class="tiny">
+          Kurum/marka/kurumsal varlık isimleri, özel bilgiler ve kişisel ifşa yasaktır.
+          Küfür, din, siyaset içeren metinler otomatik reddedilir.
+        </p>
+        <p id="formError" class="error" hidden></p>
+        <p id="formOK" class="ok" hidden>Gönderildi!</p>
+      </form>
+    </section>
+
+    <section class="toolbar">
+      <div class="left">
+        <button id="prevBtn" class="btn ghost" title="Önceki (←)">← Önceki</button>
+      </div>
+      <div class="center">
+        <span id="pageInfo"></span>
+      </div>
+      <div class="right">
+        <button id="nextBtn" class="btn ghost" title="Sonraki (→)">Sonraki →</button>
+      </div>
+    </section>
+
+    <section id="feed" class="feed"></section>
+
+    <section class="weekly card">
+      <h3>Haftalık Öne Çıkan Uyuzluklar</h3>
+      <div id="highlights"></div>
+    </section>
+  </main>
+
+  <footer class="wrap foot">
+    <small>© <span id="y"></span> Uyuzsun • Minimal ve bağımsız bir deney.</small>
+    <div class="disclaimer tiny">
+      <strong>Uyarı:</strong> Site içeriği anonim kullanıcılara aittir. Bu platform tamamen eğlence amaçlıdır.
+      Din/siyaset/politika ve doğrudan ifşa içeren paylaşımlar yasaktır. Bu tür içerikler şikayet edilirse,
+      yasal süreçlerde ilgili mevzuat kapsamında yetkili mercilere destek verilir. Eğlenmeye gelmediysen
+      lütfen başka mecralara devam et.
+    </div>
+  </footer>
+
+  <script src="/assets/app.js"></script>
+</body>
+</html>

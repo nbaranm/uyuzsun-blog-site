@@ -1,0 +1,11 @@
+
+[build]
+  publish = "."
+  functions = "netlify/functions"
+
+# Force HTTPS redirect at the edge
+[[redirects]]
+  from = "http://*uyuzsun.com/*"
+  to = "https://uyuzsun.com/:splat"
+  status = 301
+  force = true
