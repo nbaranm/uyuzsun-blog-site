@@ -1,0 +1,23 @@
+backend:
+  name: github
+  repo: nbaranm/uyuzsun-blog-site
+  branch: main
+
+site_url: https://uyuzsun-blog-site.netlify.app
+
+media_folder: "static/uploads"
+public_folder: "/uploads"
+
+publish_mode: editorial_workflow
+
+collections:
+  - name: "posts"
+    label: "Yazılar"
+    folder: "posts"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Başlık", name: "title", widget: "string" }
+      - { label: "Tarih",  name: "date",  widget: "datetime" }
+      - { label: "Kapak Görseli", name: "thumbnail", widget: "image", required: false }
+      - { label: "İçerik", name: "body", widget: "markdown" }
